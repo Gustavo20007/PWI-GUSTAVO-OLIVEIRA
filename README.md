@@ -1,7 +1,7 @@
 # PWI-GUSTAVO-OLIVEIRA
 
-gustav nao sabe nada 
+gustavo nao sabe nada 
 familia 
-sal 
-wordl m
+sla
+wordl 
 mozo
