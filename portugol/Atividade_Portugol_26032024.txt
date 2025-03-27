@@ -1,0 +1,10 @@
+Crie um algoritmo que leia nome, idade, sexo e mostre o resultado 
+Crie um algoritmo que receba três valores e na saída resultado da soma, divisão, multiplicação e subtração.
+Crie um algoritmo que calcule 10% de desconto dos seguintes produtos:
+Banana = 12,30
+Laranja = 13,50
+Maça = 11,80 
+Uva = 17,60
+Mostre o valor de cada fruta com desconto.
+Crie um algoritmo que leia quantas pães e calcule o valor total a pagar cada pão 1,20
+Crie um algoritmo que leia Marca, Modelo, cor, quantas portas e KM  
