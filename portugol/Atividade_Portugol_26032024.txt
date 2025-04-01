@@ -6,5 +6,5 @@ Laranja = 13,50
 Maça = 11,80 
 Uva = 17,60
 Mostre o valor de cada fruta com desconto.
-Crie um algoritmo que leia quantas pães e calcule o valor total a pagar cada pão 1,20
+Crie um algoritmo que leia quantos pães e calcule o valor total a pagar cada pão 1,20
 Crie um algoritmo que leia Marca, Modelo, cor, quantas portas e KM  
