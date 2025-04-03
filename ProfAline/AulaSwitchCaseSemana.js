@@ -1,4 +1,4 @@
-var opçao=18;
+var opçao=1;
 
 var mensagem;
 switch(opçao){
