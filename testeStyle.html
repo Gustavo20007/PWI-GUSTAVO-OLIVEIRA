@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop - O Melhor para seu Pet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #2d3a3a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .hero {
+            background-image: url('https://via.placeholder.com/1500x600?text=PetShop+Banner');
+            background-size: cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .services, .products {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 20px;
+        }
+
+        .service, .product {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 30%;
+            transition: transform 0.3s ease;
+        }
+
+        .service:hover, .product:hover {
+            transform: scale(1.05);
+        }
+
+        .service img, .product img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: #2d3a3a;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-item h3 {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>PetShop - O Melhor para seu Pet</h1>
+        <p>Produtos e serviços de qualidade para seu animal de estimação</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Início</a>
+        <a href="#services">Serviços</a>
+        <a href="#products">Produtos</a>
+        <a href="#contact">Contato</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Cuide do Seu Pet com Amor</h1>
+        <p>Oferecemos produtos e serviços que garantem o bem-estar do seu animalzinho!</p>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="service">
+            <img src="https://via.placeholder.com/100" alt="Banho e Tosa">
+            <h3>Banho e Tosa</h3>
+            <p>Deixe seu pet limpo e cheiroso com nosso serviço especializado.</p>
+        </div>
+        <div class="service">
+            <img src="https://via.placeholder.com/100" alt="Veterinário">
+            <h3>Atendimento Veterinário</h3>
+            <p>Cuidamos da saúde do seu pet com consultas e vacinas.</p>
+        </div>
+        <div class="service">
+            <img src="https://via.placeholder.com/100" alt="Adestramento">
+            <h3>Adestramento</h3>
+            <p>Ensine comandos e melhore o comportamento do seu animal.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="product">
+            <img src="https://via.placeholder.com/100" alt="Ração Premium">
+            <h3>Ração Premium</h3>
+            <p>Alimentação balanceada para seu pet, com ingredientes de qualidade.</p>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/100" alt="Brinquedos">
+            <h3>Brinquedos</h3>
+            <p>Produtos para entreter e exercitar seu animal de estimação.</p>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/100" alt="Acessórios">
+            <h3>Acessórios</h3>
+            <p>Collares, roupas e outros acessórios para deixar seu pet estiloso.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-form">
+            <h2>Entre em Contato</h2>
+            <form>
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu Email" required>
+                <textarea placeholder="Sua Mensagem" rows="4" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 PetShop. Todos os direitos reservados.</p>
+        <p>Rua dos Animais, 123 - São Paulo, SP</p>
+        <p>Email: contato@petshop.com.br | Telefone: (11) 1234-5678</p>
+    </footer>
+
+</body>
+</html>
