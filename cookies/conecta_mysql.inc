@@ -1,8 +1,9 @@
 <?php
-//configurações do banco de dados 
-$servidor="localhost:3306";
-$usuario_bd="admbd";
-$senha_bd="d-(tUWJ2KJ((6!Vp";
-$banco="usercookies";
-$conexao= new mysqli($servidor,$usuario_bd,$senha_bd,$banco);
+// configurações do banco de dados
+$servidor = "localhost";
+$usuario_bd = "gustavomacêdo";
+$senha_bd = "q7LNMVFyfMIJGXqq";
+$banco = "cookies";
+
+$conexao = new mysqli($servidor, $usuario_bd, $senha_bd, $banco);
 ?>

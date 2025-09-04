@@ -1,48 +1,43 @@
 <?php
-//obtem os valores digitados
-$email=$_POST["email"];
-$senha=$_POST["senha"];
+// obt�m os valores digitados
+$email = $_POST["email"];
+$senha = $_POST["senha"];
+
 include "conecta_mysql.inc";
 
-//escapar de ataques de carcteres especiais , para o SQL Injection
-$email=$conexao->real_escape_string($email);
-$senha=$conexao->real_escape_string($senha);
+// Escapa os caracteres especiais, para evitar ataques de SQL Injection
+$email = $conexao->real_escape_string($email);
+$senha = $conexao->real_escape_string($senha);
 
-//acesso ao banco de dados
-$resultado= $conexao->query("SELECT * FROM usuarios WHERE email='email'");
-$linhas= $resultado->num_rows;
-
-if ($linhas==0)
+// acesso ao banco de dados
+$resultado = $conexao->query("SELECT * FROM usuarios WHERE email='$email'");
+$linhas = $resultado->num_rows;
+if($linhas==0)  // testa se a consulta retornou algum registro
 {
-     //testando a comunicação da consulta de retorno de algum registro 
-     echo "<html><body>";
-     echo "<p aglin=\"center"> "Email não encontrado!!!!!!!!!!!!!!<p/>";
-     echo "<p aglin=\"center\><a href=\"login.html\"\>Voltar</a></p>";
-     echo "</body></html>";
+	echo "<html><body>";
+	echo "<p align=\"center\">E-mail n�o encontrado!</p>";
+	echo "<p align=\"center\"><a href=\"login.html\">Voltar</a></p>";
+	echo "</body></html>";
 }
-else{
-    $dados= $resultado->fetch_array();
-    $senha_bd=$dados["senha"];
-    if($senha!=$senha_bd)
+else
+{
+	$dados = $resultado->fetch_array();
+	$senha_banco = $dados["senha"];
+	
+   	if ($senha != $senha_banco) // confere senha
+	{
+		echo "<html><body>";
+		echo "<p align=\"center\">A senha está incorreta!</p>";
+		echo "<p align=\"center\"><a href=\"login.html\">Voltar</a></p>";
+		echo "</body></html>";
+	}
+	else   // usuário e senha corretos. Vamos criar os cookies
     {
-        //confere senha
-    echo "<html><body>";
-     echo "<p aglin=\"center"> "Senha incorreta <p/>";
-     echo "<p aglin=\"center\><a href=\"login.html\"\>Voltar</a></p>";
-     echo "</body></html>";
+        setcookie("email_usuario", $email);
+        setcookie("senha_usuario", $senha);
+        // direciona para a página inicial dos usuários cadastrados
+        header ("Location: index2.php");
     }
-
-    else
-        { // usuário e senha corretos.Vamos criar os cookies
-
-            setcookie("email_usuario", $email);
-            setcookie("senha_usuario",$senha);
-
-          // direciona para a pagina inicial dos usuários cadastrados
-          header("Location: pagina_inicial.php");
-
-        }
 }
-
 $conexao->close();
 ?>
