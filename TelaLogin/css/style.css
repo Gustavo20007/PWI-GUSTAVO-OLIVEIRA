@@ -12,10 +12,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ecf0f1;
+    background-color: #1a1a1a;
 }
 .content {
-    background-color: #fff;
+    background-color: #000000;
     border-radius: 15px;
     width: 960px;
     height: 50%;
@@ -26,7 +26,7 @@ body {
 .content::before {
     content: "";
     position: absolute;
-    background-color: #58af9b;
+    background-color: #7c3aed;
     width: 40%;
     height: 100%;
     border-top-left-radius: 15px;
@@ -41,10 +41,10 @@ body {
     text-transform: capitalize;
 }
 .title-primary {
-    color: #fff;
+    color: #a78bfa;
 }
 .title-second {
-    color: #58af9b;
+    color: #fff;
 }
 .description {
     font-size: 14px;
@@ -55,7 +55,7 @@ body {
     color: #fff;
 }
 .description-second {
-    color: #7f8c8d;
+    color: #a78bfa;
 }
 .btn {
     border-radius: 15px;
@@ -72,21 +72,21 @@ body {
 }
 .btn-primary {
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 1px solid #a78bfa;
     transition: background-color .5s;
 }
 .btn-primary:hover {
-    background-color: #fff;
-    color: #58af9b;
+    background-color: #a78bfa;
+    color: #000000;
 }
 .btn-second {
-    background-color: #58af9b;
-    border: 1px solid #58af9b;
+    background-color: #7c3aed;
+    border: 1px solid #fff;
     transition: background-color .5s;
 }
 .btn-second:hover {
     background-color: #fff;
-    border: 1px solid #58af9b;
+    border: 1px solid #7c3aed;
     color: #58af9b;
 }
 .first-content {
@@ -116,22 +116,22 @@ body {
     transition: background-color .5s;
 }
 .link-social-media:hover .item-social-media{
-    background-color: #58af9b;
+    background-color: #7c3aed;
     color: #fff;
-    border-color: #58af9b;
+    border-color: #7c3aed;
 }
 .list-social-media {
     display: flex;
     list-style-type: none;
 }
 .item-social-media {
-    border: 1px solid #bdc3c7;
+    border: 1px solid #a78bfa;
     border-radius: 50%;
     width: 35px;
     height: 35px;
     line-height: 35px;
     text-align: center;
-    color: #95a5a6;
+    color: #a78bfa;
 }
 .form {
     display: flex;
@@ -142,21 +142,21 @@ body {
     height: 45px;
     width: 100%;
     border: none;
-    background-color: #ecf0f1;
+    background-color: #232323;
 }
 input:-webkit-autofill 
 {    
-    -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
-    -webkit-text-fill-color: #000 !important;
+    -webkit-box-shadow: 0 0 0px 1000px #232323 inset !important;
+    -webkit-text-fill-color: #fff !important;
 }
 .label-input {
-    background-color: #ecf0f1;
+    background-color: #232323;
     display: flex;
     align-items: center;
     margin: 8px;
 }
 .icon-modify {
-    color: #7f8c8d;
+    color: #a78bfa;
     padding: 0 5px;
 }
 
@@ -175,7 +175,7 @@ input:-webkit-autofill
     z-index: -1;
 }
 .password {
-    color: #34495e;
+    color: #a78bfa;
     font-size: 14px;
     margin: 15px 0;
     text-align: center;
