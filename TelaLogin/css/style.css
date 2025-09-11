@@ -87,7 +87,7 @@ body {
 .btn-second:hover {
     background-color: #fff;
     border: 1px solid #7c3aed;
-    color: #58af9b;
+    color: #000000;
 }
 .first-content {
     display: flex;
