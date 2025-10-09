@@ -1,0 +1,36 @@
+<html lang="pt-br">
+  <body>
+    <div id="app">
+      <div id="auth" class="center">
+        <form id="authForm">
+          <input type="email" placeholder="E-mail" id="email">
+          <!--==============================-->
+          <label for="password">Senha:</label>
+          <input type="password" placeholder="Senha" id="password">
+ 
+          <button type="submit" id="submitAuthForm">Logar</button>
+        </form>
+ 
+        <!--Alternador o formulário de autenticação para o cadastro de novas contas-->
+        <p id="register">
+          Ainda não tem uma conta?
+          <button onclick="toggleToRegister()" class="alternative">Cadastre uma nova conta</button>
+        </p>
+ 
+        <!--Alternar o formulário de autenticação para o acesso de contas existentes-->
+        <p id="acess" class="starHidden">
+          Já possui uma conta?
+          <button onclick="toggleToRegister()" class="alternative">Acesse sua conta</button>
+        </p>
+      </div>
+    </div>
+ 
+    <!--Recursos do Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js"></script>
+     <!-- programação javascript -->
+    <script src="js/firebase.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>
