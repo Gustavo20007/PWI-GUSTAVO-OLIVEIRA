@@ -1,0 +1,73 @@
+CREATE DATABASE comercio;
+USE comercio;
+
+CREATE TABLE vendedor (
+    codvendedor INT PRIMARY KEY,
+    nomevendedor VARCHAR(50),
+    produtovendido VARCHAR(50),
+    cidade CHAR(40),
+    estado CHAR(2),
+    email VARCHAR(50),
+    valorvendido DECIMAL(10,2),
+    valorcomissao DECIMAL(10,2)
+);
+
+CREATE TABLE produtos (
+    codproduto INT PRIMARY KEY,
+    nomeproduto VARCHAR(50),
+    precounitario DECIMAL(10,2),
+    quant INT,
+    precototal DECIMAL(10,2)
+);
+
+INSERT INTO vendedor (codvendedor, nomevendedor, produtovendido, cidade, estado, email, valorvendido)
+VALUES
+(1, 'Carlos Silva', 'Notebook', 'São Paulo', 'SP', 'carlos@gmail.com', 5000.00),
+(2, 'Ana Souza', 'Celular', 'Rio de Janeiro', 'RJ', 'ana@gmail.com', 3500.00),
+(3, 'Marcos Lima', 'Monitor', 'Belo Horizonte', 'MG', 'marcos@gmail.com', 2000.00),
+(4, 'Juliana Costa', 'Teclado', 'Curitiba', 'PR', 'juliana@gmail.com', 800.00),
+(5, 'Felipe Alves', 'Mouse', 'Fortaleza', 'CE', 'felipe@gmail.com', 600.00),
+(6, 'Larissa Mendes', 'Headset', 'Salvador', 'BA', 'larissa@gmail.com', 1200.00),
+(7, 'Ricardo Rocha', 'Impressora', 'Porto Alegre', 'RS', 'ricardo@gmail.com', 1800.00),
+(8, 'Patrícia Gomes', 'Tablet', 'Recife', 'PE', 'patricia@gmail.com', 2500.00),
+(9, 'Thiago Nunes', 'Câmera', 'Natal', 'RN', 'thiago@gmail.com', 4000.00),
+(10, 'Beatriz Ramos', 'Smartwatch', 'Florianópolis', 'SC', 'beatriz@gmail.com', 1500.00);
+
+INSERT INTO produtos (codproduto, nomeproduto, precounitario, quant)
+VALUES
+(1, 'Notebook', 2500.00, 2),
+(2, 'Celular', 1750.00, 5),
+(3, 'Monitor', 1000.00, 3),
+(4, 'Teclado', 200.00, 4),
+(5, 'Mouse', 150.00, 5),
+(6, 'Headset', 300.00, 3),
+(7, 'Impressora', 900.00, 2),
+(8, 'Tablet', 1250.00, 4),
+(9, 'Câmera', 2000.00, 2),
+(10, 'Smartwatch', 750.00, 4);
+
+UPDATE vendedor
+SET valorcomissao = valorvendido * 0.10;
+
+SELECT nomevendedor AS Nome, valorvendido AS 'Valor Vendido', 
+       valorcomissao AS 'Comissão (10%)'
+FROM vendedor;
+
+UPDATE produtos
+SET precounitario = precounitario * 1.10;
+
+SELECT nomeproduto AS Produto, precounitario AS 'Preço Atualizado'
+FROM produtos;
+
+UPDATE produtos
+SET precototal = quant * precounitario;
+
+SELECT nomeproduto AS Produto, quant AS Quantidade, 
+       precounitario AS 'Preço Unitário', precototal AS 'Preço Total'
+FROM produtos;
+
+DELETE FROM vendedor
+WHERE codvendedor IN (7, 8);
+
+SELECT * FROM vendedor;
+SELECT * FROM produtos;
