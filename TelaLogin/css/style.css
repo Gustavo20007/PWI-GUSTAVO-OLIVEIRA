@@ -26,7 +26,7 @@ body {
 .content::before {
     content: "";
     position: absolute;
-    background-color: #7c3aed;
+    background-color: #e8a800;
     width: 40%;
     height: 100%;
     border-top-left-radius: 15px;
@@ -41,7 +41,7 @@ body {
     text-transform: capitalize;
 }
 .title-primary {
-    color: #a78bfa;
+    color: #e8a800;
 }
 .title-second {
     color: #fff;
@@ -55,7 +55,7 @@ body {
     color: #fff;
 }
 .description-second {
-    color: #a78bfa;
+    color: #e8a800;
 }
 .btn {
     border-radius: 15px;
@@ -72,22 +72,22 @@ body {
 }
 .btn-primary {
     background-color: transparent;
-    border: 1px solid #a78bfa;
+    border: 1px solid #000000;
     transition: background-color .5s;
 }
 .btn-primary:hover {
-    background-color: #a78bfa;
-    color: #000000;
+    background-color: #000000;
+    color: #ffd900be;
 }
 .btn-second {
-    background-color: #7c3aed;
+    background-color: #e8a800;
     border: 1px solid #fff;
     transition: background-color .5s;
 }
 .btn-second:hover {
     background-color: #fff;
-    border: 1px solid #7c3aed;
-    color: #000000;
+    border: 1px solid #000000;
+    color: #ffd900be;
 }
 .first-content {
     display: flex;
@@ -116,22 +116,22 @@ body {
     transition: background-color .5s;
 }
 .link-social-media:hover .item-social-media{
-    background-color: #7c3aed;
+    background-color: #e8a800;
     color: #fff;
-    border-color: #7c3aed;
+    border-color: #e8a800;
 }
 .list-social-media {
     display: flex;
     list-style-type: none;
 }
 .item-social-media {
-    border: 1px solid #a78bfa;
+    border: 1px solid #e8a800;
     border-radius: 50%;
     width: 35px;
     height: 35px;
     line-height: 35px;
     text-align: center;
-    color: #a78bfa;
+    color: #e8a800;
 }
 .form {
     display: flex;
@@ -156,7 +156,7 @@ input:-webkit-autofill
     margin: 8px;
 }
 .icon-modify {
-    color: #a78bfa;
+    color: #e8a800;
     padding: 0 5px;
 }
 
@@ -175,7 +175,7 @@ input:-webkit-autofill
     z-index: -1;
 }
 .password {
-    color: #a78bfa;
+    color: #e8a800;
     font-size: 14px;
     margin: 15px 0;
     text-align: center;
